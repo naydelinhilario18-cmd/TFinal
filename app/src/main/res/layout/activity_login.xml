@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <!-- Header Verde Corporativo -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="#2E7D32"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/imgLogoHeader"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/reciclaje"
+            android:contentDescription="Logo ECOLIM" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ECOLIM S.A.C."
+            android:textColor="#FFFFFF"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Plataforma de Control de Residuos"
+            android:textColor="#E8F5E9"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <!-- Zona de Formulario -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="vertical"
+        android:padding="28dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Usuario / DNI"
+            android:textColor="#212121"
+            android:textStyle="bold"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/etUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Ingrese su usuario"
+            android:inputType="text"
+            android:paddingLeft="12dp"
+            android:drawableStart="@drawable/user"
+            android:drawablePadding="10dp"
+            android:background="@android:drawable/editbox_background"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contraseña"
+            android:textColor="#212121"
+            android:textStyle="bold"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Ingrese su contraseña"
+            android:inputType="textPassword"
+            android:paddingLeft="12dp"
+            android:drawableStart="@drawable/lock"
+            android:drawablePadding="10dp"
+            android:background="@android:drawable/editbox_background"
+            android:layout_marginBottom="28dp" />
+
+        <Button
+            android:id="@+id/btnIngresar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="INGRESAR AL SISTEMA"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:backgroundTint="#2E7D32" />
+
+    </LinearLayout>
+</LinearLayout>

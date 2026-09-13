@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TFinal</string>
+
+    <string-array name="tipos_residuos">
+        <item>Orgánico</item>
+        <item>Inorgánico</item>
+        <item>Peligroso</item>
+        <item>Aprovechable</item>
+    </string-array>
+</resources>
