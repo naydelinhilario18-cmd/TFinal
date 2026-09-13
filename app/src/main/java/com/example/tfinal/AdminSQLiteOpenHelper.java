@@ -12,17 +12,26 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table usuarios(dni text primary key, nombre text, password text)");
-        db.execSQL("create table residuos(codigo integer primary key autoincrement, tipo text, peso real, fecha text)");
+        db.execSQL("create table residuos(" +
+                "codigo integer primary key autoincrement, " +
+                "area text, " +
+                "tipo text, " +
+                "peso real, " +
+                "observaciones text, " +
+                "fecha text)");
 
-        // Usuario requerido
-        db.execSQL("insert into usuarios values('user18', 'Operario ECOLIM', '1234')");
+        db.execSQL("create table usuarios(" +
+                "dni text primary key, " +
+                "nombre text, " +
+                "password text)");
+
+        db.execSQL("insert into usuarios(dni, nombre, password) values('user18', 'Trabajador Ecolim', '1234')");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("drop table if exists usuarios");
         db.execSQL("drop table if exists residuos");
+        db.execSQL("drop table if exists usuarios");
         onCreate(db);
     }
 }

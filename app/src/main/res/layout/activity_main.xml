@@ -2,115 +2,135 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F4F9F4"
-    android:padding="16dp">
+    android:background="#F8F9FA"
+    android:fillViewport="true">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <TextView
-            android:text="🌱 Gestión de Residuos ECOLIM"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="#2E7D32"
-            android:layout_gravity="center"
-            android:layout_marginBottom="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <EditText
-            android:id="@+id/etCodigo"
-            android:hint="Código (para buscar, modificar o eliminar)"
-            android:inputType="number"
-            android:background="@android:drawable/editbox_background_normal"
-            android:padding="12dp"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"/>
+            android:background="#1B5E20"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-        <Spinner
-            android:id="@+id/spTipoResiduo"
-            android:entries="@array/tipos_residuos"
-            android:padding="8dp"
+            <ImageView
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_marginBottom="6dp"
+                android:src="@drawable/reciclaje" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ECOLIM S.A.C."
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Control de Residuos Sólidos"
+                android:textColor="#C8E6C9"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"/>
+            android:orientation="vertical"
+            android:padding="16dp">
 
-        <EditText
-            android:id="@+id/etPeso"
-            android:hint="Peso en Kg"
-            android:inputType="numberDecimal"
-            android:background="@android:drawable/editbox_background_normal"
-            android:padding="12dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Área de trabajo:"
+                android:textColor="#263238"
+                android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/etFecha"
-            android:hint="Fecha (ej. 2026-06-06)"
-            android:background="@android:drawable/editbox_background_normal"
-            android:padding="12dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"/>
+            <Spinner
+                android:id="@+id/spArea"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="12dp"
+                android:background="@android:drawable/spinner_background"
+                android:padding="8dp" />
 
-        <Button
-            android:id="@+id/btnRegistrar"
-            android:text="✨ Registrar Residuo"
-            android:textColor="#FFFFFF"
-            android:backgroundTint="#2E7D32"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Tipo de residuo:"
+                android:textColor="#263238"
+                android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/btnBuscar"
-            android:text="🔍 Buscar por Código"
-            android:textColor="#FFFFFF"
-            android:backgroundTint="#0277BD"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"/>
+            <Spinner
+                android:id="@+id/spTipoResiduo"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="12dp"
+                android:background="@android:drawable/spinner_background"
+                android:padding="8dp" />
 
-        <Button
-            android:id="@+id/btnModificar"
-            android:text="✏️ Modificar"
-            android:textColor="#FFFFFF"
-            android:backgroundTint="#F57F17"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Cantidad / Peso (Kg):"
+                android:textColor="#263238"
+                android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/btnEliminar"
-            android:text="🗑️ Eliminar"
-            android:textColor="#FFFFFF"
-            android:backgroundTint="#C62828"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"/>
+            <EditText
+                android:id="@+id/etPeso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@android:drawable/editbox_background_normal"
+                android:hint="0.00"
+                android:inputType="numberDecimal"
+                android:padding="10dp" />
 
-        <TextView
-            android:text="📋 Historial de Transacciones:"
-            android:textStyle="bold"
-            android:textSize="16sp"
-            android:textColor="#37474F"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Observaciones:"
+                android:textColor="#263238"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tvReporte"
-            android:text="Cargando registros..."
-            android:textSize="14sp"
-            android:textColor="#000000"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#FFFFFF"
-            android:padding="12dp"/>
+            <EditText
+                android:id="@+id/etObservaciones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="@android:drawable/editbox_background_normal"
+                android:hint="Ingrese detalles adicionales"
+                android:padding="10dp" />
 
+            <Button
+                android:id="@+id/btnRegistrar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="#2E7D32"
+                android:text="ENVIAR"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/btnVerRegistros"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#0277BD"
+                android:text="VER REGISTROS"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>
